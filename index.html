@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Age Weaver | Precision Age Calculator</title>
+  <!-- Google Fonts for modern typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="age-calculator-container">
+    <div class="glass-card">
+      <!-- Header with elegant title -->
+      <div class="app-header">
+        <div class="icon-badge">✨</div>
+        <h1>Age Weaver</h1>
+        <p>Calculate your exact journey — years, months, days & beyond</p>
+      </div>
+
+      <!-- main input section -->
+      <div class="input-group">
+        <label for="birthdate">📅 Select your birth date</label>
+        <input type="date" id="birthdate" class="date-input" aria-label="Birth date picker">
+        <div class="error-message" id="errorMsg"></div>
+      </div>
+
+      <!-- action buttons row -->
+      <div class="action-buttons">
+        <button id="calculateBtn" class="btn btn-primary">✨ Calculate Age</button>
+        <button id="resetBtn" class="btn btn-secondary">⟳ Clear</button>
+      </div>
+
+      <!-- results panel: dynamic & animated -->
+      <div id="resultPanel" class="result-panel hidden">
+        <div class="result-header">
+          <span>🎂 Your Precise Age</span>
+          <button id="shareBtn" class="share-icon" title="Share results">📤</button>
+        </div>
+        
+        <!-- main age display -->
+        <div class="age-main">
+          <div class="age-unit">
+            <span class="number" id="yearsCount">0</span>
+            <span class="label">Years</span>
+          </div>
+          <div class="age-unit">
+            <span class="number" id="monthsCount">0</span>
+            <span class="label">Months</span>
+          </div>
+          <div class="age-unit">
+            <span class="number" id="daysCount">0</span>
+            <span class="label">Days</span>
+          </div>
+        </div>
+
+        <!-- detailed metrics -->
+        <div class="details-grid">
+          <div class="detail-card">
+            <span class="detail-label">📆 Total Months</span>
+            <span class="detail-value" id="totalMonths">—</span>
+          </div>
+          <div class="detail-card">
+            <span class="detail-label">⏱️ Total Weeks & Days</span>
+            <span class="detail-value" id="totalWeeksDays">—</span>
+          </div>
+          <div class="detail-card">
+            <span class="detail-label">🎈 Next Birthday in</span>
+            <span class="detail-value" id="nextBirthday">—</span>
+          </div>
+          <div class="detail-card">
+            <span class="detail-label">⚡ Age in Seconds</span>
+            <span class="detail-value" id="ageSeconds">—</span>
+          </div>
+        </div>
+
+        <!-- fun extras: zodiac & year fact -->
+        <div class="extra-info">
+          <div class="zodiac-wrap">
+            <span>🌟 Zodiac Sign: </span>
+            <strong id="zodiacSign">—</strong>
+          </div>
+          <div class="fun-fact">
+            <span>📜 Fun fact: </span>
+            <span id="funFactText">—</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- optional reset confirmation / subtle footer -->
+      <div class="footer-note">
+        <span>🌙 Leap year aware • exact day precision</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
